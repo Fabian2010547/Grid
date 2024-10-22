@@ -4,15 +4,13 @@ local partSize = 1 -- Größe des Parts (1x1)
 local spacing = 5 -- Abstand zwischen den Parts in Studs
 
 -- Überprüfe, ob das Grid-Modell bereits existiert, und lösche es, wenn es vorhanden ist
-local existingGrid = workspace:FindFirstChild("Grid"):GetChildren()
+local existingGrid = workspace:FindFirstChild("Grid")
 if existingGrid then
-    for i in existingGrid do
-      i:Destroy
-    end
+    existingGrid:Destroy()
 end
 
 -- Erstelle ein neues Modell, um die Teile zu gruppieren
-local grid = workspace.Grid 
+local gridModel = workspace.Grid
 
 for x = 0, gridSizeX - 1 do
     for y = 0, gridSizeY - 1 do
@@ -21,7 +19,7 @@ for x = 0, gridSizeX - 1 do
         part.Size = Vector3.new(partSize, partSize, partSize) -- 1x1x1 Part
         part.Position = Vector3.new(x * spacing, 0, y * spacing) -- Berechne die Position
         part.Anchored = true -- Stelle sicher, dass das Part nicht herunterfällt
-        part.Parent = grid -- Füge das Part zum Ordner hinzu
+        part.Parent = gridModel -- Füge das Part zum Modell hinzu
     end
 end
 
