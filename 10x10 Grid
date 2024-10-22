@@ -1,7 +1,7 @@
-local gridSizeX = 10 -- Anzahl der Teile in X-Richtung
-local gridSizeY = 10 -- Anzahl der Teile in Y-Richtung
+local gridSizeX = 100 -- Anzahl der Teile in X-Richtung
+local gridSizeY = 100 -- Anzahl der Teile in Y-Richtung
 local partSize = 1 -- Größe des Parts (1x1)
-local spacing = 10 -- Abstand zwischen den Parts in Studs
+local spacing = 5 -- Abstand zwischen den Parts in Studs
 
 -- Überprüfe, ob das Grid-Modell bereits existiert, und lösche es, wenn es vorhanden ist
 local existingGrid = workspace:FindFirstChild("Grid"):GetChildren()
