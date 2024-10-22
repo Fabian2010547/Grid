@@ -13,7 +13,7 @@ for x = 1, gridSizeX - 1 do
         -- Erstelle ein neues Part
         local part = Instance.new("Part")
         part.Size = Vector3.new(partSize, partSize, partSize) -- 1x1x1 Part
-        part.Name = x..",0,"..y
+        part.Name = x..", 0, "..y
         part.Position = Vector3.new(x * spacing, 0, y * spacing) -- Berechne die Position
         part.Anchored = true -- Stelle sicher, dass das Part nicht herunterfällt
         part.Parent = gridModel -- Füge das Part zum Modell hinzu
