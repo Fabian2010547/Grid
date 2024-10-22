@@ -1,11 +1,12 @@
-local gridSizeX = 100 -- Anzahl der Teile in X-Richtung
-local gridSizeY = 100 -- Anzahl der Teile in Y-Richtung
+local gridSizeX = 20 -- Anzahl der Teile in X-Richtung
+local gridSizeY = 20 -- Anzahl der Teile in Y-Richtung
 local partSize = 1 -- Größe des Parts (1x1)
 local spacing = 5 -- Abstand zwischen den Parts in Studs
 local counter = 1
 
 -- Erstelle ein neues Modell, um die Teile zu gruppieren
-local gridModel = workspace.Grid
+local gridModel = Instance.new("Folder", workspace)
+gridModel.Name = "Grid"
 
 for x = 1, gridSizeX - 1 do
     for y = 1, gridSizeY - 1 do
