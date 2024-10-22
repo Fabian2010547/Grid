@@ -1,7 +1,7 @@
 local gridSizeX = 10 -- Anzahl der Teile in X-Richtung
 local gridSizeY = 10 -- Anzahl der Teile in Y-Richtung
 local partSize = 1 -- Größe des Parts (1x1)
-local spacing = 0 -- Abstand zwischen den Parts in Studs
+local spacing = 1 -- Abstand zwischen den Parts in Studs
 local counter = 1
 
 -- Erstelle ein neues Modell, um die Teile zu gruppieren
