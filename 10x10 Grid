@@ -1,19 +1,19 @@
-local gridSizeX = 20 -- Anzahl der Teile in X-Richtung
-local gridSizeY = 20 -- Anzahl der Teile in Y-Richtung
+local gridSizeX = 10 -- Anzahl der Teile in X-Richtung
+local gridSizeY = 10 -- Anzahl der Teile in Y-Richtung
 local partSize = 1 -- Größe des Parts (1x1)
-local spacing = 5 -- Abstand zwischen den Parts in Studs
+local spacing = 0 -- Abstand zwischen den Parts in Studs
 local counter = 1
 
 -- Erstelle ein neues Modell, um die Teile zu gruppieren
 local gridModel = Instance.new("Folder", workspace)
 gridModel.Name = "Grid"
 
-for x = 1, gridSizeX - 1 do
-    for y = 1, gridSizeY - 1 do
+for x = 0, gridSizeX - 1 do
+    for y = 0, gridSizeY - 1 do
         -- Erstelle ein neues Part
         local part = Instance.new("Part")
         part.Size = Vector3.new(partSize, partSize, partSize) -- 1x1x1 Part
-        part.Name = "node"..counter
+        part.Name = x.."_"..y
         part.Position = Vector3.new(x * spacing, 0, y * spacing) -- Berechne die Position
         part.Anchored = true -- Stelle sicher, dass das Part nicht herunterfällt
         part.Parent = gridModel -- Füge das Part zum Modell hinzu
