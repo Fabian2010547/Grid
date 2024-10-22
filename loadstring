@@ -1,1 +1,1 @@
-loadstring(game:HttpGet((""),true))()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Fabian2010547/Grid/refs/heads/main/10x10%20Grid"),true))()
